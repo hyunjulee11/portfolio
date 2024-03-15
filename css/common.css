@@ -331,7 +331,7 @@ h1.tit {position: relative; top: 0%;  font-size: 72px; font-weight: 200; text-al
 .contents {max-width:1200px; margin-left:auto; margin-right:auto;}
 .contents h2 {font-size:2em; }
 .skill_list {display:block; margin:5em 0}
-.skill_list li {display:inline-block; width:20%}
+.skill_list li {display:inline-block; width:20%; padding:0 1em}
 /*.skill_list li img {width:100%}*/
 
 .mouse_area {position: absolute; bottom: 10px; left: 0; right: 0;}
@@ -397,3 +397,9 @@ div.if {float:none; text-align:center; margin-bottom:40px;}
 .con.active {display:block;}
 .sk >.slick-slider > .slick-list > .slick-track, .sk > .slick-slider > .slick-list > .slick-track li {width:100% !important}
 .overlay {display: none; position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: #333; overflow: auto; z-index:999; opacity: 0.8;}
+
+
+
+@media (max-width:630px )  {
+  .skill_list li img {width:100%}
+}
