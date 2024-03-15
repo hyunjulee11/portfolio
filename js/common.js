@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   $("#fullpage").fullpage({
     scrollBar: true,
-    responsiveWidth: 400,
+    responsiveWidth: 300,
     navigation: true,
     navigationTooltips: ["home", "about", "portfolio", "lodev", "connect"],
     anchors: ["home", "about", "portfolio", "lodev", "connect"],
