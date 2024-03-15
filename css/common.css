@@ -374,7 +374,7 @@ h1.tit {position: relative; top: 0%;  font-size: 72px; font-weight: 200; text-al
 /************** layer pup  ****************************/
 #lay_view {display: none; width: 1200px; margin: 0 auto; position: fixed; top: 10%; height: 100%; right: 0; left: 0; z-index: 99;}
 .view_area {border-radius:20px;  left:0; right:0; background:#fff; border-radius:20px;  padding:2em; }
-.view_in {height:700px;}
+.view_in {height:80VH;}
  h3.if {font-size:2.25rem; padding-bottom:40px; font-weight:500}
  h4.if {font-size:1.8rem; padding-bottom:20px; font-weight:500; padding-top: 10px;}
 p.if {margin-bottom:10px;}
