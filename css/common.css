@@ -9,7 +9,7 @@
 .fp-tableCell {display:table-cell; vertical-align:middle; width:100%; height:100%}
 h1.tit {position: relative; top: 0%;  font-size: 72px; font-weight: 200; text-align: center; text-transform: uppercase;  opacity: 0; z-index: 100;}
 
-#fp-nav {position:fixed; right:10px; top: 50%; opacity: 1;transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translate3d(0, -50%, 0); z-index:99}
+#fp-nav {position:fixed; right:10px; top: 50%; opacity: 1;transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translate3d(0, -50%, 0); z-index:999}
 #fp-nav ul li {display:block; width:14px; height:13px; margin:7px; position:relative;}
 #fp-nav ul li a {display:block; position:relative; width:100%; height:100%; cursor:pointer; }
 #fp-nav ul li a span {border-radius: 50%; position: absolute; z-index: 1; height: 4px; width: 4px; border: 0; background: #000; box-shadow: 0px 2px 5px rgb(87 124 147 / 30%); left: 50%;  top: 50%;  margin: -2px 0 0 -2px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out;}
@@ -330,23 +330,20 @@ h1.tit {position: relative; top: 0%;  font-size: 72px; font-weight: 200; text-al
 
 .contents {max-width:1200px; margin-left:auto; margin-right:auto;}
 .contents h2 {font-size:2em; }
-.skill_list {display:block; margin:5em 0}
-.skill_list li {display:inline-block; width:20%; padding:0 1em}
+.skill_list {display:flex; margin:5em 0; align-items: center;}
+.skill_list li {display:inline-block; width:25%; }
 /*.skill_list li img {width:100%}*/
 
 .mouse_area {position: absolute; bottom: 10px; left: 0; right: 0;}
 .mouse_area p {margin-top: 50px; font-family: "Cabin", sans-serif; letter-spacing: 12px; text-indent: 12px; color: #ffffff; -webkit-animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite; animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;}
 
 /************** SLIDER  ****************************/
-#flex-container { position: relative; width: 100%; _overflow:hidden;}
+#flex-container { position: relative; width: 100%; _overflow:hidden; padding-top:5em}
 .slick-track li {overflow:hidden; float:left}
-.slick-track li:after {content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;}
-.slider-item img{float:right;}
-.slider-item .slider-content {z-index: 2; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);}
+.slick-track li:after {content: ""; display: block; height: 0;  clear: both; visibility: hidden;}
+.slider-item .img {float:right; width:70%; text-align: right;}
+
+.slider-item .slider-content {z-index: 2; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width:30%}
 .slider-item h2 {font-size:1.8em; opacity: 0; color:#000; -webkit-transition: opacity 0.5s,-webkit-transform 0.5s; -o-transition: opacity 0.5s,transform 0.5s; padding-bottom:20px; text-align:left; 
 	transition: opacity 0.5s,-webkit-transform 0.5s;  transition: opacity 0.5s,transform 0.5s; transition: opacity 0.5s,transform 0.5s,-webkit-transform 0.5s; -webkit-transform: translateX(100px); -ms-transform: translateX(100px); transform: translateX(100px);}
 .slider-item .btn_area {display:flex; margin-top:20px;}
@@ -376,11 +373,11 @@ h1.tit {position: relative; top: 0%;  font-size: 72px; font-weight: 200; text-al
 
 /************** layer pup  ****************************/
 #lay_view {display: none; width: 1200px; margin: 0 auto; position: fixed; top: 10%; height: 100%; right: 0; left: 0; z-index: 99;}
-.view_area {border-radius:20px;  left:0; right:0; background:#fff; border-radius:20px;  padding:2em;  padding-right:15px;}
-.view_in {padding:20px; height:800px;}
+.view_area {border-radius:20px;  left:0; right:0; background:#fff; border-radius:20px;  padding:2em; }
+.view_in {height:700px;}
  h3.if {font-size:2.25rem; padding-bottom:40px; font-weight:500}
- h4.if {font-size:1.8rem; padding-bottom:20px; font-weight:400}
-p.if {margin-bottom:40px;}
+ h4.if {font-size:1.8rem; padding-bottom:20px; font-weight:500; padding-top: 10px;}
+p.if {margin-bottom:10px;}
 div.if {float:none; text-align:center; margin-bottom:40px;}
 .tab_btn {display:flex; justify-content: center; margin-bottom:40px !important;}
 
@@ -398,8 +395,44 @@ div.if {float:none; text-align:center; margin-bottom:40px;}
 .sk >.slick-slider > .slick-list > .slick-track, .sk > .slick-slider > .slick-list > .slick-track li {width:100% !important}
 .overlay {display: none; position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: #333; overflow: auto; z-index:999; opacity: 0.8;}
 
+@media (max-width:1400px )  {
+	.slider-control {display:none;}
+}
+
+@media (max-width:1200px )  {
+	.slider-item .slider-content {padding-left:3%;}
+	.slider-item .img img {width:100%}
+	.skill_list li img.w100 {width:100%}
+	.slider-item .img {width:60%;}
+	#lay_view {width:100%; margin:0 auto;}
+}
+
+@media (max-width:1000px )  {
+	.con {padding:0 2.45rem;}
+	.slider-item .slider-content {padding-left:0}
+	.slider-item h2 {font-size:1.6em;}
+	.slider-item h3 {display:none}
+	.slider-item p {margin-bottom:10px}
+	.slick-dots {bottom:0}
+
+}
+
+@media (max-width:800px )  {
+	.slider-item .img {float:none; text-align:center; width:100%}
+	.slider-item .slider-content {width:100%; position:static; transform: translateY(-0%);}
+	.slick-dots {text-align: center; position:static; display: flex; width: 100%; justify-content: center;}
+
+}
 
 
 @media (max-width:730px )  {
+  .skill_list {padding:0 2em; display:flex; align-items: center;}
+  .skill_list li {width:25%;; padding:0 0.5em}
   .skill_list li img {width:100%}
+ 
+}
+
+@media (max-width:700px )  {
+	
+	
 }
