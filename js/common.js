@@ -224,11 +224,14 @@ $('.slider-items').slick({
 	  el.querySelector('.btn_close').addEventListener("click", function(){
 		  $('.slick-dots').fadeToggle(200)	;
 		OVERLAY.style.display = 'none';
-		el.style.display = 'none';
-		 
+		el.style.display = 'none';		 
 	  })
 	}) 
 
+	$('.view_area').css('height', $(window).height()); 
+	 $(window).resize(function() {
+        $('.view_area').css('height', $(window).height()); 
+    }); 
 
 
 });
