@@ -38,8 +38,8 @@ $(document).ready(function () {
     scrollBar: true,
     responsiveWidth: 300,
     navigation: true,
-    navigationTooltips: ["home", "about", "portfolio", "lodev", "connect"],
-    anchors: ["home", "about", "portfolio", "lodev", "connect"],
+    navigationTooltips: ["home", "about", "portfolio", "design", "connect"],
+    anchors: ["home", "about", "portfolio", "design", "connect"],
     menu: "#myMenu",
     fitToSection: false,
 
@@ -205,7 +205,7 @@ $('.slider-items').slick({
       });
 
 //laypup
-	const POPUP_BTN =  document.querySelectorAll("#lay_btn");
+	const POPUP_BTN =  document.querySelectorAll("#lay_btn, #app_btn");
 	const LAYER_POPUP = document.querySelectorAll("#lay_view");
 	const OVERLAY =  document.querySelector('.overlay');
 
@@ -213,25 +213,30 @@ $('.slider-items').slick({
 	 btn.addEventListener("click", function(){
 		OVERLAY.style.display = 'block';
 		LAYER_POPUP[i].style.display = 'block';
-		 $('.slick-dots').fadeToggle(200)	;
+		 $('.slick-dots, #fp-nav').fadeToggle(200)	;
 		 var tx = ($(window).width()-$("#lay_view .view_area").width())/2;
 		 var ty = ($(window).height()-$("#lay_view .view_area").height())/2;
-		 $("#lay_view .view_area").css({left:tx+"px",top:ty+"px"});
+		 $("#lay_view .view_area").css({left:tx+"px",top:ty+"px"});	 
 		 
 	  })
 	}) 
 	LAYER_POPUP.forEach(function(el, i){
 	  el.querySelector('.btn_close').addEventListener("click", function(){
-		  $('.slick-dots').fadeToggle(200)	;
+		  $('.slick-dots, #fp-nav').fadeToggle(200)	;
 		OVERLAY.style.display = 'none';
-		el.style.display = 'none';		 
+		el.style.display = 'none';
+		 
 	  })
 	}) 
 
-	$('.view_area').css('height', $(window).height()); 
+ $('.view_area').css('height', $(window).height()); 
 	 $(window).resize(function() {
         $('.view_area').css('height', $(window).height()); 
     }); 
+
+
+
+//
 
 
 });
