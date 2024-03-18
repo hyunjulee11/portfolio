@@ -371,10 +371,22 @@ h1.tit {position: relative; top: 0%;  font-size: 72px; font-weight: 200; text-al
 .prev {border: none; position:absolute; bottom:0;z-index:99; transform: translateY(calc(-50% - 4.8rem));animation: 1s ease-in-out 0s infinite alternate both running nextBtnAni; right: calc(100% + 2.4rem); transform: rotate(0deg);}
 .next {border: none; position:absolute; bottom:0; z-index:99; transform: translateY(calc(-50% - 4.8rem));animation: 1s ease-in-out 0s infinite alternate both running nextBtnAni; left: calc(100% + 2.4rem); transform: rotate(-180deg);}
 
+
+/************** design ****************************/
+.app_list {width:100%; display:table; -webkit-box-pack: justify; justify-content: space-between; flex-wrap: wrap; gap: 5.6rem 2.4rem; transition: gap 0.3s ease 0s;padding-top: 5em;}
+.app_list li {display:inline-block; border-radius: 0.4rem; cursor: pointer; flex-basis: calc(20% - 3.2rem); width:25%; }
+.app_list li button {position: relative; margin: 0px auto; overflow: hidden; border-radius: 0.8rem;animation: 1.7s ease-in-out 0s infinite alternate both running up-down-ani; z-index:99;}
+.app_list li button img, .app_list li a img  {border-radius: 0.8rem; transition: transform 0.3s ease 0s, filter 0.3s ease 0s; filter: saturate(0);}
+.app_list li button {position: relative; margin: 0px auto; overflow: hidden; border-radius: 0.8rem;animation: 1.7s ease-in-out 0s infinite alternate both running up-down-ani;}
+.app_list li button:hover img, .app_list li a:hover img {transform: scale(1.12); filter: saturate(1);}
+.autoimg {object-fit: contain !important; position: relative !important; width:100%}
+
+
 /************** layer pup  ****************************/
-#lay_view {display: none; width: 1200px; margin: 0 auto; position: fixed; top: 10%; height: 100%; right: 0; left: 0; z-index: 99;}
+#lay_view {display: none; width: 1200px; margin: 0 auto; position: fixed; top: 10%; height: 100%; right: 0; left: 0; z-index: 9999;}
 .view_area {border-radius:20px;  left:0; right:0; background:#fff; border-radius:20px;  padding:2em; }
-.view_in {height:80VH;}
+.view_in {height:80vh; }
+.view_in iframe {overflow-y:none}
  h3.if {font-size:2.25rem; padding-bottom:40px; font-weight:500}
  h4.if {font-size:1.8rem; padding-bottom:20px; font-weight:500; padding-top: 10px;}
 p.if {margin-bottom:10px;}
@@ -394,6 +406,9 @@ div.if {float:none; text-align:center; margin-bottom:40px;}
 .con.active {display:block;}
 .sk >.slick-slider > .slick-list > .slick-track, .sk > .slick-slider > .slick-list > .slick-track li {width:100% !important}
 .overlay {display: none; position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: #333; overflow: auto; z-index:999; opacity: 0.8;}
+
+/************** contact  ****************************/
+
 
 @media (max-width:1400px )  {
 	.slider-control {display:none;}
@@ -435,7 +450,11 @@ div.if {float:none; text-align:center; margin-bottom:40px;}
 }
 
 @media (max-width:600px )  {
-        h3.if {font-size:1.8rem; padding-bottom:20px;}
+    h3.if {font-size:1.8rem; padding-bottom:20px;}
 	h4.if {font-size:1.5rem;}	
-	
+	.app_list li {width:33%;}	
+}
+
+@media (max-width:400px )  {
+	.app_list li {width:50%;}	
 }
