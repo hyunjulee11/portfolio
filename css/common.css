@@ -344,7 +344,7 @@ h1.tit {position: relative; top:50%;  font-size: 72px; font-weight: 200; text-al
 .slider-item .img {float:right; width:70%; text-align: right;}
 
 .slider-item .slider-content {z-index: 2; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width:30%}
-.slider-item h2 {font-size:1.8em; opacity: 0; color:#000; -webkit-transition: opacity 0.5s,-webkit-transform 0.5s; -o-transition: opacity 0.5s,transform 0.5s; padding-bottom:20px; text-align:left; 
+.slider-item h2 {font-size:1.8em; opacity: 0; color:#000; -webkit-transition: opacity 0.5s,-webkit-transform 0.5s; -o-transition: opacity 0.5s,transform 0.5s; padding-bottom:20px; text-align:left; white-space:nowrap;
 	transition: opacity 0.5s,-webkit-transform 0.5s;  transition: opacity 0.5s,transform 0.5s; transition: opacity 0.5s,transform 0.5s,-webkit-transform 0.5s; -webkit-transform: translateX(100px); -ms-transform: translateX(100px); transform: translateX(100px);}
 .slider-item .btn_area {display:flex; margin-top:20px;}
 .slider-item .button {font-family: yg-jalnan; display: inline-block; width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; padding: 10px 55px 10px 30px; border: 2px solid transparent; text-decoration: none;
