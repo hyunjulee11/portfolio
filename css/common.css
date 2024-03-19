@@ -408,7 +408,7 @@ div.if {float:none; text-align:center; margin-bottom:40px;}
 .overlay {display: none; position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: #333; overflow: auto; z-index:999; opacity: 0.8;}
 
 /************** contact  ****************************/
-
+.contact {padding-top: 5em;}
 
 @media (max-width:1400px )  {
 	.slider-control {display:none;}
