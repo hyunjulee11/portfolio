@@ -457,5 +457,6 @@ div.if {float:none; text-align:center; margin-bottom:40px;}
 }
 
 @media (max-width:400px )  {
+	.slick-dots li {margin:10px 6px}
 	.app_list li {width:50%;}	
 }
